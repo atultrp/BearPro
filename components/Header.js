@@ -8,13 +8,13 @@ const Header = () => {
                     <li className="">
                         <a href="#" className="">Home</a>
                     </li>
-                    <li className="opacity-75">
+                    <li className="hover:opacity-100 opacity-75">
                         <a href="#mint" className="">Mint</a>
                     </li>
-                    <li className="opacity-75">
+                    <li className="hover:opacity-100 opacity-75">
                         <a href="#team" className="">Team</a>
                     </li>
-                    <li className="opacity-75">
+                    <li className="hover:opacity-100 opacity-75">
                         <a href="#faq" className="">FAQ</a>
                     </li>
                 </ul>
