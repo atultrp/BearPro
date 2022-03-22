@@ -6,7 +6,7 @@ const Header = () => {
                 <h1 className="text-2xl custom-font font-bold">MIBTEST PRO</h1>
                 <ul className="flex space-x-16">
                     <li className="">
-                        <a href="#" className="">Home</a>
+                        <a href="#home" className="">Home</a>
                     </li>
                     <li className="hover:opacity-100 opacity-75">
                         <a href="#mint" className="">Mint</a>
