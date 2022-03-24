@@ -45,32 +45,32 @@ const Body = () => {
 
             {/* In Progress */}
             <div className="container mx-auto w-full overflow-hidden relative pt-16">
-                <div className="flex space-x-4 before:bg-gradient-to-r from-indigo-500 ">
-                    <div className="">
+                <div className="flex before:bg-gradient-to-r from-indigo-500 ">
+                    <div className="mx-2">
                         <img src="/Assets/1.png" />
                     </div>
-                    <div className="">
+                    <div className="mx-2">
                         <img src="/Assets/2.png" />
                     </div>
-                    <div className="">
+                    <div className="mx-2">
                         <img src="/Assets/3.png" />
                     </div>
-                    <div className="">
+                    <div className="mx-2">
                         <img src="/Assets/4.png" />
                     </div>
-                    <div className="">
+                    <div className="mx-2">
                         <img src="/Assets/5.png" />
                     </div>
-                    <div className="">
+                    <div className="mx-2">
                         <img src="/Assets/6.png" />
                     </div>
-                    <div className="">
+                    <div className="mx-2">
                         <img src="/Assets/7.png" />
                     </div>
-                    <div className="">
+                    <div className="mx-2">
                         <img src="/Assets/8.png" />
                     </div>
-                    <div className="">
+                    <div className="mx-2">
                         <img src="/Assets/9.png" />
                     </div>
                 </div>
