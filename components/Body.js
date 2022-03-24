@@ -1,8 +1,6 @@
-import Image from "next/image"
 import { useState } from "react";
 
 const Body = () => {
-
     const [isconnected, setIsConnected] = useState(false);
     const [hasMetamask, setHasMetamask] = useState(false);
     const [signer, setSigner] = useState(undefined);
@@ -10,21 +8,21 @@ const Body = () => {
 
     const connect = async () => {
         if (typeof window.ethereum !== "undefined") {
-          try {
-            await ethereum.request({ method: "eth_requestAccounts" });
-            setIsConnected(true);
-            const provider = new ethers.providers.Web3Provider(window.ethereum);
-            setSigner(provider.getSigner());
-            const web3 = new Web3(window.web3.currentProvider);
-            setWeb3Var(web3);
-          } catch (e) {
-            console.log(e);
-          }
+            try {
+                await ethereum.request({ method: "eth_requestAccounts" });
+                setIsConnected(true);
+                const provider = new ethers.providers.Web3Provider(window.ethereum);
+                setSigner(provider.getSigner());
+                const web3 = new Web3(window.web3.currentProvider);
+                setWeb3Var(web3);
+            } catch (e) {
+                console.log(e);
+            }
         } else {
-          setIsConnected(false);
+            setIsConnected(false);
         }
-      }
-    
+    }
+
 
     return (
         <div>
@@ -49,31 +47,31 @@ const Body = () => {
             <div className="container mx-auto w-full overflow-hidden relative pt-16">
                 <div className="flex space-x-4 before:bg-gradient-to-r from-indigo-500 ">
                     <div className="">
-                        <Image src="/Assets/1.png" width={200} height={200} />
+                        <img src="/Assets/1.png" />
                     </div>
                     <div className="">
-                        <Image src="/Assets/2.png" width={200} height={200} />
+                        <img src="/Assets/2.png" />
                     </div>
                     <div className="">
-                        <Image src="/Assets/3.png" width={200} height={200} />
+                        <img src="/Assets/3.png" />
                     </div>
                     <div className="">
-                        <Image src="/Assets/4.png" width={200} height={200} />
+                        <img src="/Assets/4.png" />
                     </div>
                     <div className="">
-                        <Image src="/Assets/5.png" width={200} height={200} />
+                        <img src="/Assets/5.png" />
                     </div>
                     <div className="">
-                        <Image src="/Assets/6.png" width={200} height={200} />
+                        <img src="/Assets/6.png" />
                     </div>
                     <div className="">
-                        <Image src="/Assets/7.png" width={200} height={200} />
+                        <img src="/Assets/7.png" />
                     </div>
                     <div className="">
-                        <Image src="/Assets/8.png" width={200} height={200} />
+                        <img src="/Assets/8.png" />
                     </div>
                     <div className="">
-                        <Image src="/Assets/9.png" width={200} height={200} />
+                        <img src="/Assets/9.png" />
                     </div>
                 </div>
             </div>
