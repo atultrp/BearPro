@@ -1,6 +1,31 @@
 import Image from "next/image"
+import { useState } from "react";
 
 const Body = () => {
+
+    const [isconnected, setIsConnected] = useState(false);
+    const [hasMetamask, setHasMetamask] = useState(false);
+    const [signer, setSigner] = useState(undefined);
+    const [userAddress, setUserAddress] = useState()
+
+    const connect = async () => {
+        if (typeof window.ethereum !== "undefined") {
+          try {
+            await ethereum.request({ method: "eth_requestAccounts" });
+            setIsConnected(true);
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            setSigner(provider.getSigner());
+            const web3 = new Web3(window.web3.currentProvider);
+            setWeb3Var(web3);
+          } catch (e) {
+            console.log(e);
+          }
+        } else {
+          setIsConnected(false);
+        }
+      }
+    
+
     return (
         <div>
             <div id="home" className="pt-16 mx-3.5 lg:w-1/2 md:mx-auto ">
@@ -58,17 +83,17 @@ const Body = () => {
                     Mint a MIB
                 </h2>
                 <div className="lg:flex">
-                    <div className="">
+                    <div className="lg:w-1/2 lg:mr-0 lg:ml-auto">
                         <img src="/Assets/beargif.gif" />
                     </div>
-                    <div className="pl-6">
+                    <div className=" lg:w-1/2">
                         <h3 className="custom-font text-3xl font-bold text-[#aa9b76] uppercase">About</h3>
-                        <p className="mx-4 text-lg">
+                        <p className="mx-4 text-lg py-4">
                             An NFT, also known as Non-Fungible Token, is a one-of-a-kind digital token stored on a digital ledger/blockchain. The ther "Non-Fungible" signifies something not interchangeable with another good due to its distinct properties.<br />
                             The Mibbear collection is made up of 3000 NFTs, each NFT has different characteristics that make each of them totally unique. Depending on the different characteristics that an nft obtains, it will have a different level of rarity. For example, only 30 nfts will have the paladin helmet, giving them a mythic rarity.<br />
                             Each rarity gives you a different weight in the project. How to participate in project decisions, or airdrops of our token.
                         </p>
-                        <button className="custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75">Connect And Mint</button>
+                        <button className="custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75" onClick={connect}>{isconnected ? "Connected" : "Connect And Mint"}</button>
                     </div>
                 </div>
             </div>
