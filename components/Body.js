@@ -12,9 +12,9 @@ const Body = () => {
         CONTRACT_ADDRESS: "",
         SCAN_LINK: "",
         NETWORK: {
-          NAME: "",
-          SYMBOL: "",
-          ID: 0,
+            NAME: "",
+            SYMBOL: "",
+            ID: 0,
         },
         NFT_NAME: "",
         SYMBOL: "",
@@ -25,7 +25,7 @@ const Body = () => {
         MARKETPLACE: "",
         MARKETPLACE_LINK: "",
         SHOW_BACKGROUND: false,
-      });
+    });
 
     const connect = async () => {
         if (typeof window.ethereum !== "undefined") {
@@ -167,10 +167,30 @@ const Body = () => {
                                 <div className="custom-font font-bold text-xl px-3">{mintAmount}</div>
                                 <button className="custom-font hover:bg-red-500 py-2 px-5 font-bold text-2xl bg-white text-[#1b1b1b] rounded-[50%] hover:text-white" onClick={incrementMintAmount}>+</button>
                             </div>
-                            <button className={`custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75 mt-5`} onClick ={claimNFTs} >Mint Now</button>
+                            <button className={`custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75 mt-5`} onClick={claimNFTs} >Mint Now</button>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div id="team" className="pt-16">
+                <h2 className="text-4xl md:text-6xl md:text-center custom-font uppercase md:leading-snug font-bold">Teams</h2>
+                <div className="flex justify-center space-x-6 pb-5 pt-10">
+                    <img src="/Assets/t1.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
+                    <img src="/Assets/t2.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
+                    <img src="/Assets/t3.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
+                    <img src="/Assets/t4.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
+                </div>
+                <div className="flex justify-center space-x-6 py-5">
+                    <img src="/Assets/t5.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
+                    <img src="/Assets/t6.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
+                    <img src="/Assets/t7.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
+                </div>
+            </div>
+
+
+            <div>
+                <img src="/Assets/footer.png" className="w-50%"/>
             </div>
 
         </div>
