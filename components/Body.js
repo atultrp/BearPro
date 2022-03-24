@@ -5,7 +5,27 @@ const Body = () => {
     const [hasMetamask, setHasMetamask] = useState(false);
     const [signer, setSigner] = useState(undefined);
     const [userAddress, setUserAddress] = useState();
-    const [mintAmount, setMintAmount] = useState(1)
+    const [mintAmount, setMintAmount] = useState(1);
+    const [claimingNft, setClaimingNft] = useState(false);
+
+    const [CONFIG, SET_CONFIG] = useState({
+        CONTRACT_ADDRESS: "",
+        SCAN_LINK: "",
+        NETWORK: {
+          NAME: "",
+          SYMBOL: "",
+          ID: 0,
+        },
+        NFT_NAME: "",
+        SYMBOL: "",
+        MAX_SUPPLY: 1,
+        WEI_COST: 0,
+        DISPLAY_COST: 0,
+        GAS_LIMIT: 0,
+        MARKETPLACE: "",
+        MARKETPLACE_LINK: "",
+        SHOW_BACKGROUND: false,
+      });
 
     const connect = async () => {
         if (typeof window.ethereum !== "undefined") {
@@ -87,7 +107,7 @@ const Body = () => {
                         <button className="custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75">
                             <a href="#mint">Mint a MIB</a>
                         </button>
-                        <button className="custom-font py-2 px-4 text-lg bg-blue-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75">Marketplace</button>
+                        <button className={`custom-font py-2 px-4 text-lg bg-blue-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75`}>Marketplace</button>
                     </div>
                 </div>
             </div>
@@ -143,11 +163,11 @@ const Body = () => {
                         <button className={`custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75 ${isconnected ? "hidden" : "block"}`} onClick={connect}>Connect And Mint</button>
                         <div className={`${isconnected ? "block" : "hidden"} `}>
                             <div className="flex space-x-2 items-center">
-                                <button className="custom-font hover:bg-blue-700 py-2 px-5 font-bold text-2xl bg-white text-[#1b1b1b] rounded-[50%]" onClick={decrementMintAmount}>-</button>
+                                <button className="custom-font hover:bg-red-500 py-2 px-5 font-bold text-2xl bg-white text-[#1b1b1b] rounded-[50%] hover:text-white" onClick={decrementMintAmount}>-</button>
                                 <div className="custom-font font-bold text-xl px-3">{mintAmount}</div>
-                                <button className="custom-font hover:bg-blue-700 py-2 px-5 font-bold text-2xl bg-white text-[#1b1b1b] rounded-[50%]" onClick={incrementMintAmount}>+</button>
+                                <button className="custom-font hover:bg-red-500 py-2 px-5 font-bold text-2xl bg-white text-[#1b1b1b] rounded-[50%] hover:text-white" onClick={incrementMintAmount}>+</button>
                             </div>
-                            <button className={`custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75 mt-5`} >Mint Now</button>
+                            <button className={`custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75 mt-5`} onClick ={claimNFTs} >Mint Now</button>
                         </div>
                     </div>
                 </div>
