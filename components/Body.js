@@ -4,7 +4,8 @@ const Body = () => {
     const [isconnected, setIsConnected] = useState(false);
     const [hasMetamask, setHasMetamask] = useState(false);
     const [signer, setSigner] = useState(undefined);
-    const [userAddress, setUserAddress] = useState()
+    const [userAddress, setUserAddress] = useState();
+    const [mintAmount, setMintAmount] = useState(1)
 
     const connect = async () => {
         if (typeof window.ethereum !== "undefined") {
@@ -22,6 +23,54 @@ const Body = () => {
             setIsConnected(false);
         }
     }
+
+    const decrementMintAmount = () => {
+        let newMintAmount = mintAmount - 1;
+        if (newMintAmount < 1) {
+            newMintAmount = 1;
+        }
+        setMintAmount(newMintAmount);
+    };
+
+    const incrementMintAmount = () => {
+        let newMintAmount = mintAmount + 1;
+        if (newMintAmount > 50) {
+            newMintAmount = 50;
+        }
+        setMintAmount(newMintAmount);
+    };
+
+    const claimNFTs = () => {
+        let cost = CONFIG.WEI_COST;
+        let gasLimit = CONFIG.GAS_LIMIT;
+        let totalCostWei = String(cost * mintAmount);
+        let totalGasLimit = String(gasLimit * mintAmount);
+        console.log("Cost: ", totalCostWei);
+        console.log("Gas limit: ", totalGasLimit);
+        setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
+        setClaimingNft(true);
+        blockchain.smartContract.methods
+            .mint(blockchain.account, mintAmount)
+            .send({
+                gasLimit: String(totalGasLimit),
+                to: CONFIG.CONTRACT_ADDRESS,
+                from: blockchain.account,
+                value: totalCostWei,
+            })
+            .once("error", (err) => {
+                console.log(err);
+                setFeedback("Sorry, something went wrong please try again later.");
+                setClaimingNft(false);
+            })
+            .then((receipt) => {
+                console.log(receipt);
+                setFeedback(
+                    `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`
+                );
+                setClaimingNft(false);
+                dispatch(fetchData(blockchain.account));
+            });
+    };
 
 
     return (
@@ -91,7 +140,15 @@ const Body = () => {
                             The Mibbear collection is made up of 3000 NFTs, each NFT has different characteristics that make each of them totally unique. Depending on the different characteristics that an nft obtains, it will have a different level of rarity. For example, only 30 nfts will have the paladin helmet, giving them a mythic rarity.<br />
                             Each rarity gives you a different weight in the project. How to participate in project decisions, or airdrops of our token.
                         </p>
-                        <button className="custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75" onClick={connect}>{isconnected ? "Connected" : "Connect And Mint"}</button>
+                        <button className={`custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75 ${isconnected ? "hidden" : "block"}`} onClick={connect}>Connect And Mint</button>
+                        <div className={`${isconnected ? "block" : "hidden"} `}>
+                            <div className="flex space-x-2 items-center">
+                                <button className="custom-font hover:bg-blue-700 py-2 px-5 font-bold text-2xl bg-white text-[#1b1b1b] rounded-[50%]" onClick={decrementMintAmount}>-</button>
+                                <div className="custom-font font-bold text-xl px-3">{mintAmount}</div>
+                                <button className="custom-font hover:bg-blue-700 py-2 px-5 font-bold text-2xl bg-white text-[#1b1b1b] rounded-[50%]" onClick={incrementMintAmount}>+</button>
+                            </div>
+                            <button className={`custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75 mt-5`} >Mint Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
