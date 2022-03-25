@@ -938,8 +938,8 @@ const Body = () => {
     const faqs = [
         {
             key: 0,
-            title: "What is Mibbear?",
-            description: "Mibbear is a project within the Solana blockchain. Based on a metaverse of bears where you can interact with your nfts within the project."
+            title: "What is Bear?",
+            description: "Bear is a project within the polygon blockchain. Based on a metaverse of bears where you can interact with your nfts within the project."
         },
         {
             key: 1,
@@ -949,10 +949,10 @@ const Body = () => {
         {
             key: 2,
             title: "What wallet can i use?",
-            description: "All wallets in the solana ecosystem are compatible with our project. Our recommendation is Phantom Wallet."
+            description: "All wallets in the polygon ecosystem are compatible with our project. Our recommendation is Phantom Wallet."
         },
         { key: 2, title: "What is the price of nft?", description: "The initial price will be 0.35 Sol for the first 500 nfts. The rest will cost 0.6 Sol." },
-        { key: 2, title: "Where can I sell my nft?", description: "You can sell and buy at Opensea. Mibbear will not be responsible for exchanges for other marketplaces." },
+        { key: 2, title: "Where can I sell my nft?", description: "You can sell and buy at Opensea. Bear will not be responsible for exchanges for other marketplaces." },
     ];
 
 
@@ -961,15 +961,15 @@ const Body = () => {
         <div>
             <div id="home" className="pt-16 mx-3.5 lg:w-1/2 md:mx-auto ">
                 <h2 className="text-4xl md:text-6xl md:text-center custom-font uppercase md:leading-snug font-bold">
-                    Collect MIB NFTs on the metaverse
+                    Collect BEAR NFTs on the metaverse
                 </h2>
                 <div className="w-11/12 md:w-10/12 mx-auto">
                     <p className="md:text-center pt-6 text-lg">
-                        3000 confused bears who have somehow made their way into the metaverse. Only on Solana.
+                        3000 confused bears who have somehow made their way into the metaverse. Only on Polygon.
                     </p>
                     <div className="flex md:w-1/2 md:mx-auto space-x-3 pt-7">
                         <button className="custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75">
-                            <a href="#mint">Mint a MIB</a>
+                            <a href="#mint">Mint a BEAR</a>
                         </button>
                         <button className={`custom-font py-2 px-4 text-lg bg-blue-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75`}>Marketplace</button>
                     </div>
@@ -1013,7 +1013,7 @@ const Body = () => {
 
             <div id="mint" className="pt-16">
                 <h2 className="text-4xl mx-auto md:text-6xl md:text-center custom-font uppercase md:leading-snug font-bold">
-                    Mint a MIB
+                    Mint a BEAR
                 </h2>
                 <div className="lg:flex lg:items-center">
                     <div className="lg:px-32 lg:mr-0 lg:ml-auto">
@@ -1023,7 +1023,7 @@ const Body = () => {
                         <h3 className="custom-font text-3xl font-bold text-[#aa9b76] uppercase">About</h3>
                         <p className="mx-4 text-lg py-4">
                             An NFT, also known as Non-Fungible Token, is a one-of-a-kind digital token stored on a digital ledger/blockchain. The ther "Non-Fungible" signifies something not interchangeable with another good due to its distinct properties.<br />
-                            The Mibbear collection is made up of 3000 NFTs, each NFT has different characteristics that make each of them totally unique. Depending on the different characteristics that an nft obtains, it will have a different level of rarity. For example, only 30 nfts will have the paladin helmet, giving them a mythic rarity.<br />
+                            The Bear collection is made up of 3000 NFTs, each NFT has different characteristics that make each of them totally unique. Depending on the different characteristics that an nft obtains, it will have a different level of rarity. For example, only 30 nfts will have the paladin helmet, giving them a mythic rarity.<br />
                             Each rarity gives you a different weight in the project. How to participate in project decisions, or airdrops of our token.
                         </p>
 

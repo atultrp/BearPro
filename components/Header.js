@@ -3,7 +3,7 @@ const Header = () => {
     return (
         <>
             <nav className="flex items-center justify-between py-4 px-3 bg-[#1b1b1b] text-white border-b-2 border-b-stone-400 md:py-6 md:px-16">
-                <h1 className="text-2xl custom-font font-bold">MIBTEST PRO</h1>
+                <h1 className="text-2xl custom-font font-bold">BEAR PRO</h1>
                 <ul className="flex md:space-x-16 space-x-2 font-bold">
                     <li className="">
                         <a href="#home" className="">Home</a>
