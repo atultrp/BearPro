@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import Accordion from "./Accordion";
 
 const Body = () => {
@@ -6,8 +6,11 @@ const Body = () => {
     const [hasMetamask, setHasMetamask] = useState(false);
     const [signer, setSigner] = useState(undefined);
     const [userAddress, setUserAddress] = useState();
+    const [blockchain, setBlockchain] = useState();
+    const [web3Var, setWeb3Var] = useState();
     const [mintAmount, setMintAmount] = useState(1);
     const [claimingNft, setClaimingNft] = useState(false);
+    const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
 
     const [CONFIG, SET_CONFIG] = useState({
         CONTRACT_ADDRESS: "",
@@ -28,6 +31,7 @@ const Body = () => {
         SHOW_BACKGROUND: false,
     });
 
+    // Metamask Connection
     const connect = async () => {
         if (typeof window.ethereum !== "undefined") {
             try {
@@ -45,6 +49,25 @@ const Body = () => {
         }
     }
 
+    useEffect(async () => {
+        try {
+            await ethereum.request({ method: "eth_requestAccounts" });
+            setIsConnected(true);
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            setSigner(provider.getSigner());
+            const web3 = new Web3(window.web3.currentProvider);
+            setWeb3Var(web3);
+
+            // User Address
+            const accountResponse = await web3Var.eth.getAccounts();
+            setBlockchain(accountResponse);
+            const instance = accountResponse[0];
+            setUserAddress(instance);
+        } catch (err) {
+            console.log(err)
+        }
+    }, [web3Var])
+
     const decrementMintAmount = () => {
         let newMintAmount = mintAmount - 1;
         if (newMintAmount < 1) {
@@ -61,6 +84,8 @@ const Body = () => {
         setMintAmount(newMintAmount);
     };
 
+    // Mint
+
     const claimNFTs = () => {
         let cost = CONFIG.WEI_COST;
         let gasLimit = CONFIG.GAS_LIMIT;
@@ -70,12 +95,12 @@ const Body = () => {
         console.log("Gas limit: ", totalGasLimit);
         setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
         setClaimingNft(true);
-        blockchain.smartContract.methods
-            .mint(blockchain.account, mintAmount)
+        blockchain && blockchain.smartContract.methods
+            .mint(userAddress, mintAmount)
             .send({
                 gasLimit: String(totalGasLimit),
                 to: CONFIG.CONTRACT_ADDRESS,
-                from: blockchain.account,
+                from: userAddress,
                 value: totalCostWei,
             })
             .once("error", (err) => {
@@ -185,7 +210,9 @@ const Body = () => {
                             The Mibbear collection is made up of 3000 NFTs, each NFT has different characteristics that make each of them totally unique. Depending on the different characteristics that an nft obtains, it will have a different level of rarity. For example, only 30 nfts will have the paladin helmet, giving them a mythic rarity.<br />
                             Each rarity gives you a different weight in the project. How to participate in project decisions, or airdrops of our token.
                         </p>
+
                         <button className={`custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75 ${isconnected ? "hidden" : "block"}`} onClick={connect}>Connect And Mint</button>
+
                         <div className={`${isconnected ? "block" : "hidden"} `}>
                             <div className="flex space-x-2 items-center">
                                 <button className="custom-font hover:bg-red-500 py-2 px-5 font-bold text-2xl bg-white text-[#1b1b1b] rounded-[50%] hover:text-white" onClick={decrementMintAmount}>-</button>
