@@ -200,13 +200,13 @@ const Body = () => {
 
             <div id="team" className="pt-16">
                 <h2 className="text-4xl md:text-6xl md:text-center custom-font uppercase md:leading-snug font-bold">Teams</h2>
-                <div className="flex justify-center space-x-6 pb-5 pt-10">
+                <div className="flex justify-center space-x-10 pb-5 pt-10">
                     <img src="/Assets/t1.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                     <img src="/Assets/t2.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                     <img src="/Assets/t3.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                     <img src="/Assets/t4.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                 </div>
-                <div className="flex justify-center space-x-6 py-5">
+                <div className="flex justify-center space-x-10 py-5">
                     <img src="/Assets/t5.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                     <img src="/Assets/t6.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                     <img src="/Assets/t7.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
