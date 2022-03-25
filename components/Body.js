@@ -153,25 +153,25 @@ const Body = () => {
                     <div className="mx-2">
                         <img src="/Assets/5.png" />
                     </div>
-                    <div className="mx-2">
+                    {/* <div className="mx-2">
                         <img src="/Assets/6.png" />
-                    </div>
-                    <div className="mx-2">
+                    </div> */}
+                    {/* <div className="mx-2">
                         <img src="/Assets/7.png" />
-                    </div>
-                    <div className="mx-2">
+                    </div> */}
+                    {/* <div className="mx-2">
                         <img src="/Assets/8.png" />
-                    </div>
-                    <div className="mx-2">
+                    </div> */}
+                    {/* <div className="mx-2">
                         <img src="/Assets/9.png" />
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
             {/* Mint Secion */}
 
             <div id="mint" className="pt-16">
-                <h2 className="text-4xl md:text-6xl md:text-center custom-font uppercase md:leading-snug font-bold">
+                <h2 className="text-4xl mx-auto md:text-6xl md:text-center custom-font uppercase md:leading-snug font-bold">
                     Mint a MIB
                 </h2>
                 <div className="lg:flex lg:items-center">
