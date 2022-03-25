@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Accordion from "./Accordion";
 
 const Body = () => {
     const [isconnected, setIsConnected] = useState(false);
@@ -91,6 +92,28 @@ const Body = () => {
                 dispatch(fetchData(blockchain.account));
             });
     };
+
+    // Accordion
+    const faqs = [
+        {
+            key: 0,
+            title: "What is Mibbear?",
+            description: "Mibbear is a project within the Solana blockchain. Based on a metaverse of bears where you can interact with your nfts within the project."
+        },
+        {
+            key: 1,
+            title: "When can i buy a bear?",
+            description: "The NFTs release date is January 23 at 19:00 UTC. Follow our official channels to find out the latest news."
+        },
+        {
+            key: 2,
+            title: "What wallet can i use?",
+            description: "All wallets in the solana ecosystem are compatible with our project. Our recommendation is Phantom Wallet."
+        },
+        { key: 2, title: "What is the price of nft?", description: "The initial price will be 0.35 Sol for the first 500 nfts. The rest will cost 0.6 Sol." },
+        { key: 2, title: "Where can I sell my nft?", description: "You can sell and buy at Opensea. Mibbear will not be responsible for exchanges for other marketplaces." },
+    ];
+
 
 
     return (
@@ -190,9 +213,25 @@ const Body = () => {
                 </div>
             </div>
 
+            {/* Accordion Section */}
 
-            <div>
-                <img src="/Assets/footer.png" className="w-50%"/>
+
+            <div className="lg:flex mb-2 w-full pl-2 pt-16" id="faq">
+                <div className="w-1/2 mx-auto">
+                    <h1 className="text-4xl md:text-6xl md:text-center custom-font uppercase md:leading-snug font-bold">Frequently asked questions</h1>
+                </div>
+                <div className="w-1/2 px-5 lg:px-24">
+                    {faqs.map((faq) => {
+                        return <Accordion title={faq.title} description={faq.description} />
+                    })}
+                </div>
+            </div>
+
+
+            {/* Footer Section */}
+
+            <div className="w-1/2 mx-auto">
+                <img src="/Assets/footer.png" />
             </div>
 
         </div>
