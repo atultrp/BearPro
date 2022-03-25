@@ -1035,7 +1035,7 @@ const Body = () => {
                                 <div className="custom-font font-bold text-xl px-3">{mintAmount}</div>
                                 <button className="custom-font hover:bg-red-500 py-2 px-5 font-bold text-2xl bg-white text-[#1b1b1b] rounded-[50%] hover:text-white" onClick={incrementMintAmount}>+</button>
                             </div>
-                            <button className={`custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75 mt-5`} onClick={(e) => claimNFTs(e)} >Mint Now</button>
+                            <button className={`custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75 mt-5 ml-5`} onClick={(e) => claimNFTs(e)} >Mint Now</button>
                         </div>
                     </div>
                 </div>
