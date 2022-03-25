@@ -145,12 +145,14 @@ const Body = () => {
                 </div>
             </div>
 
+            {/* Mint Secion */}
+
             <div id="mint" className="pt-16">
                 <h2 className="text-4xl md:text-6xl md:text-center custom-font uppercase md:leading-snug font-bold">
                     Mint a MIB
                 </h2>
-                <div className="lg:flex">
-                    <div className="lg:w-1/2 lg:mr-0 lg:ml-auto">
+                <div className="lg:flex lg:items-center">
+                    <div className="lg:px-32 lg:mr-0 lg:ml-auto">
                         <img src="/Assets/beargif.gif" />
                     </div>
                     <div className=" lg:w-1/2">
@@ -176,15 +178,15 @@ const Body = () => {
             <div id="team" className="pt-16">
                 <h2 className="text-4xl md:text-6xl md:text-center custom-font uppercase md:leading-snug font-bold">Teams</h2>
                 <div className="flex justify-center space-x-6 pb-5 pt-10">
-                    <img src="/Assets/t1.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
-                    <img src="/Assets/t2.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
-                    <img src="/Assets/t3.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
-                    <img src="/Assets/t4.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
+                    <img src="/Assets/t1.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
+                    <img src="/Assets/t2.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
+                    <img src="/Assets/t3.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
+                    <img src="/Assets/t4.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                 </div>
                 <div className="flex justify-center space-x-6 py-5">
-                    <img src="/Assets/t5.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
-                    <img src="/Assets/t6.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
-                    <img src="/Assets/t7.png" className="w-32 rounded-full hover:shadow hover:shadow-white" />
+                    <img src="/Assets/t5.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
+                    <img src="/Assets/t6.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
+                    <img src="/Assets/t7.png" className="w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                 </div>
             </div>
 
