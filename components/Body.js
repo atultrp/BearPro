@@ -245,10 +245,10 @@ const Body = () => {
 
 
             <div className="lg:flex mb-2 w-full pl-2 pt-16" id="faq">
-                <div className="w-1/2 mx-auto">
+                <div className="lg:w-1/2 px-5 pb-5 lg:px-0 mx-auto">
                     <h1 className="text-4xl md:text-6xl md:text-center custom-font uppercase md:leading-snug font-bold">Frequently asked questions</h1>
                 </div>
-                <div className="w-1/2 px-5 lg:px-24">
+                <div className="lg:w-1/2 px-5 lg:px-24">
                     {faqs.map((faq) => {
                         return <Accordion title={faq.title} description={faq.description} />
                     })}
@@ -258,7 +258,7 @@ const Body = () => {
 
             {/* Footer Section */}
 
-            <div className="w-1/2 mx-auto">
+            <div className="w-3/4 lg:w-1/2 mx-auto">
                 <img src="/Assets/footer.png" />
             </div>
 
