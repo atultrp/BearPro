@@ -167,24 +167,24 @@ const Body = () => {
 
             <div class={styles.slider}>
                 <div class={styles.slideTrack}>
-                    <div class={styles.slide}><img class="sli" src="/Assets/1.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/2.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/3.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/4.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/5.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/6.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/7.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/8.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/9.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/1.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/2.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/3.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/4.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/5.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/6.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/7.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/8.png" /></div>
-                    <div class={styles.slide}><img class="sli" src="/Assets/9.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/1.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/2.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/3.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/4.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/5.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/6.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/7.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/8.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/9.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/1.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/2.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/3.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/4.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/5.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/6.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/7.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/8.png" /></div>
+                    <div class={styles.slide}><img class={styles.sli} src="/Assets/9.png" /></div>
                 </div>
             </div>
 

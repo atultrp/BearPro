@@ -6,7 +6,7 @@
     display: grid;
     place-items: center;
     overflow: hidden;
-    margin: 22px auto auto
+    margin: 22px auto auto;
 }
 
 .slideTrack {
@@ -29,7 +29,20 @@
     align-items: center;
     padding: 20px;
     -webkit-perspective: 150px;
-    perspective: 150px
+    perspective: 150px;
+}
+
+.sli {
+    width: 100%;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    border-radius: 10%
+}
+
+.sli:hover {
+    -webkit-transform: translateZ(20px);
+    transform: translateZ(20px)
 }
 
 .slider:after,
@@ -52,4 +65,15 @@
     transform: rotate(180deg);
     right: 0;
     top: 0
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0s);
+        transform: translateX(0s)
+    }
+    to {
+        -webkit-transform: translateX(-2250px);
+        transform: translateX(-2250px)
+    }
 }
