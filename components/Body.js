@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Accordion from "./Accordion";
 import { ethers } from "ethers"
 import Web3 from 'web3';
+import styles from '../styles/slider.module.css';
 
 const Body = () => {
     const [isconnected, setIsConnected] = useState(false);
@@ -162,35 +163,28 @@ const Body = () => {
             </div>
 
             {/* In Progress */}
-            <div className="container mx-auto w-full overflow-hidden relative pt-16">
-                <div className="flex before:bg-gradient-to-r from-indigo-500 ">
-                    <div className="mx-2">
-                        <img src="/Assets/1.png" />
-                    </div>
-                    <div className="mx-2">
-                        <img src="/Assets/2.png" />
-                    </div>
-                    <div className="mx-2">
-                        <img src="/Assets/3.png" />
-                    </div>
-                    <div className="mx-2">
-                        <img src="/Assets/4.png" />
-                    </div>
-                    <div className="mx-2">
-                        <img src="/Assets/5.png" />
-                    </div>
-                    {/* <div className="mx-2">
-                        <img src="/Assets/6.png" />
-                    </div> */}
-                    {/* <div className="mx-2">
-                        <img src="/Assets/7.png" />
-                    </div> */}
-                    {/* <div className="mx-2">
-                        <img src="/Assets/8.png" />
-                    </div> */}
-                    {/* <div className="mx-2">
-                        <img src="/Assets/9.png" />
-                    </div> */}
+            
+
+            <div class={styles.slider}>
+                <div class={styles.slideTrack}>
+                    <div class={styles.slide}><img class="sli" src="/Assets/1.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/2.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/3.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/4.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/5.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/6.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/7.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/8.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/9.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/1.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/2.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/3.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/4.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/5.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/6.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/7.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/8.png" /></div>
+                    <div class={styles.slide}><img class="sli" src="/Assets/9.png" /></div>
                 </div>
             </div>
 
@@ -219,7 +213,7 @@ const Body = () => {
                     <div className="pt-6 lg:w-1/2">
 
 
-                        <h3 className="custom-font text-3xl lg:text-3xl font-bold text-[#aa9b76] uppercase pt-6">About</h3>
+                        <h3 className="custom-font justify-center text-3xl lg:text-3xl font-bold text-[#aa9b76] uppercase pt-6">About</h3>
 
                         <p className="mx-6 text-lg py-4 text-left">
                             An NFT, also known as Non-Fungible Token, is a one-of-a-kind digital token stored on a digital ledger/blockchain. The ther "Non-Fungible" signifies something not interchangeable with another good due to its distinct properties.<br />
