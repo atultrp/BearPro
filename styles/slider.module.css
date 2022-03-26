@@ -47,7 +47,7 @@
 
 .slider:after,
 .slider:before {
-    background: linear-gradient(90deg, #1b1b1b 0, rgba(226, 225, 225, 0));
+    /* background: linear-gradient(90deg, #1b1b1b 0, rgba(226, 225, 225, 0)); */
     content: "";
     height: 100%;
     position: absolute;
@@ -56,11 +56,13 @@
 }
 
 .slider:before {
+    background: linear-gradient(90deg, rgba(39,103,187,1) 0, rgba(226, 225, 225, 0));
     left: 0;
     top: 0
 }
 
 .slider:after {
+    background: linear-gradient(90deg, rgba(16,72,144,1) 0, rgba(226, 225, 225, 0));
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     right: 0;
