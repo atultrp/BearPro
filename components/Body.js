@@ -153,7 +153,7 @@ const Body = () => {
                     <p className="md:text-center pt-6 text-lg">
                         3000 confused bears who have somehow made their way into the metaverse. Only on Polygon.
                     </p>
-                    <div className="flex md:w-1/2 md:mx-auto space-x-3 pt-7">
+                    <div className="flex md:justify-center space-x-3 pt-7">
                         <button className="custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75">
                             <a href="#mint">Mint a BEAR</a>
                         </button>
@@ -163,7 +163,7 @@ const Body = () => {
             </div>
 
             {/* In Progress */}
-            
+
 
             <div class={styles.slider}>
                 <div class={styles.slideTrack}>
@@ -196,7 +196,9 @@ const Body = () => {
                 </h2>
                 <div className="lg:flex lg:items-center">
                     <div className="lg:px-32 lg:mr-0 lg:ml-auto mx-12">
-                        <img src="/Assets/beargif.gif" />
+                        <div className="md:justify-center md:flex md:items-center ">
+                            <img src="/Assets/beargif.gif" />
+                        </div>
                         <div className={` justify-center ${isconnected ? "hidden" : "block"}`}>
                             <button className={`custom-font py-2 px-4 text-lg bg-red-500 text-white rounded-full uppercase font-semibold hover:bg-opacity-75`} onClick={connect}>Connect And Mint</button>
                         </div>
@@ -213,7 +215,7 @@ const Body = () => {
                     <div className="pt-6 lg:w-1/2">
 
 
-                        <h3 className="custom-font justify-center text-3xl lg:text-3xl font-bold text-[#aa9b76] uppercase pt-6">About</h3>
+                        <h3 className="custom-font justify-center text-3xl lg:text-3xl font-bold text-white uppercase pt-6">About</h3>
 
                         <p className="mx-6 text-lg py-4 text-left">
                             An NFT, also known as Non-Fungible Token, is a one-of-a-kind digital token stored on a digital ledger/blockchain. The ther "Non-Fungible" signifies something not interchangeable with another good due to its distinct properties.<br />
@@ -228,13 +230,13 @@ const Body = () => {
 
             <div id="team" className="pt-16 text-center">
                 <h2 className="text-4xl md:text-6xl md:text-center custom-font uppercase md:leading-snug font-bold">Teams</h2>
-                <div className="flex justify-center space-x-5 lg:space-x-10 pb-5 pt-10">
+                <div className="flex justify-center space-x-3 md:space-x-5 lg:space-x-10 pb-5 pt-10">
                     <img src="/Assets/t1.png" className="w-20 lg:w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                     <img src="/Assets/t2.png" className="w-20 lg:w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                     <img src="/Assets/t3.png" className="w-20 lg:w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                     <img src="/Assets/t4.png" className="w-20 lg:w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                 </div>
-                <div className="flex justify-center space-x-5 lg:space-x-10 py-5">
+                <div className="flex justify-center space-x-3 md:space-x-5 lg:space-x-10 py-5">
                     <img src="/Assets/t5.png" className="w-20 lg:w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                     <img src="/Assets/t6.png" className="w-20 lg:w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
                     <img src="/Assets/t7.png" className="w-20 lg:w-32 rounded-full ease-in-out lg:grayscale lg:hover:grayscale-0 lg:hover:scale-110" />
